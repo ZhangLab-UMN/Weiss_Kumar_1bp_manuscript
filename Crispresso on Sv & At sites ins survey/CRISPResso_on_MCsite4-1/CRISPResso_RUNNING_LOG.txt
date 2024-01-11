@@ -1,0 +1,74 @@
+CRISPResso version 2.1.1
+[Command used]:
+/opt/conda/bin/CRISPResso --fastq_r1 1_R1_001.fastq.gz --fastq_r2 1_R2_001.fastq.gz --amplicon_seq ACGAATGGCTTGATCCCTTCATCGGGTACGTAAGCAGTCCTTCGCAAGGATGCAGCTATAATACTTTATAAAATTAAAGTTTGCATTCTCAATACGGAGTTCGCTTTAAGATCTGTTATGTCAACTCTCGGCGCCCTGGCCAGGTGTTCGATGCGCGTCTCACATGGATGCAGTGGTGAAATAATCCACGCCCTATTAGAAACATAAGTCTATTGGAATTGGCTCTGTATCAATGGAATTTTTCTAATAGGGATAGCCGAGACCAGTTTTCTCGCACTTAAGCTCTGGTTCGGACAGAAATATAAGCCGAACCCTGTATTTCGCGATCTGCCGAACAAATGCTCTACGGGGAGTAAGCCGAGCCCAGCATCTCGCCCTCCAAATAATATGCTGAGTCCGTCTCACTTATTCTTGAAACAGAGCCCAGAA --guide_seq GTTTTCTCGCACTTAAGCTC --output_folder At_protoplast_MCsite4_pTW246 --name MCsite4-1 --ignore_substitutions --quantification_window_size 3 --min_identity_score 90
+
+[Execution log]:
+Estimating average read length...
+Merging paired sequences with Flash...
+Running FLASH command: flash "1_R1_001.fastq.gz" "1_R2_001.fastq.gz" --min-overlap 10 --max-overlap 100 --allow-outies -z -d /DATA/At_protoplast_MCsite4_pTW246/CRISPResso_on_MCsite4-1 -o out >>/DATA/At_protoplast_MCsite4_pTW246/CRISPResso_on_MCsite4-1/CRISPResso_RUNNING_LOG.txt 2>&1
+[FLASH] Starting FLASH v1.2.11
+[FLASH] Fast Length Adjustment of SHort reads
+[FLASH]  
+[FLASH] Input files:
+[FLASH]     1_R1_001.fastq.gz
+[FLASH]     1_R2_001.fastq.gz
+[FLASH]  
+[FLASH] Output files:
+[FLASH]     /DATA/At_protoplast_MCsite4_pTW246/CRISPResso_on_MCsite4-1/out.extendedFrags.fastq.gz
+[FLASH]     /DATA/At_protoplast_MCsite4_pTW246/CRISPResso_on_MCsite4-1/out.notCombined_1.fastq.gz
+[FLASH]     /DATA/At_protoplast_MCsite4_pTW246/CRISPResso_on_MCsite4-1/out.notCombined_2.fastq.gz
+[FLASH]     /DATA/At_protoplast_MCsite4_pTW246/CRISPResso_on_MCsite4-1/out.hist
+[FLASH]     /DATA/At_protoplast_MCsite4_pTW246/CRISPResso_on_MCsite4-1/out.histogram
+[FLASH]  
+[FLASH] Parameters:
+[FLASH]     Min overlap:           10
+[FLASH]     Max overlap:           100
+[FLASH]     Max mismatch density:  0.250000
+[FLASH]     Allow "outie" pairs:   true
+[FLASH]     Cap mismatch quals:    false
+[FLASH]     Combiner threads:      3
+[FLASH]     Input format:          FASTQ, phred_offset=33
+[FLASH]     Output format:         FASTQ, phred_offset=33, gzip
+[FLASH]  
+[FLASH] Starting reader and writer threads
+[FLASH] Starting 3 combiner threads
+[FLASH] Processed 25000 read pairs
+[FLASH] Processed 50000 read pairs
+[FLASH] Processed 60199 read pairs
+[FLASH]  
+[FLASH] Read combination statistics:
+[FLASH]     Total pairs:      60199
+[FLASH]     Combined pairs:   51236
+[FLASH]         Innie pairs:   49994 (97.58% of combined)
+[FLASH]         Outie pairs:   1242 (2.42% of combined)
+[FLASH]     Uncombined pairs: 8963
+[FLASH]     Percent combined: 85.11%
+[FLASH]  
+[FLASH] Writing histogram files.
+[FLASH] WARNING: An unexpectedly high proportion of combined pairs (13.94%)
+overlapped by more than 100 bp, the --max-overlap (-M) parameter.  Consider
+increasing this parameter.  (As-is, FLASH is penalizing overlaps longer than
+100 bp when considering them for possible combining!)
+[FLASH]  
+[FLASH] FLASH v1.2.11 complete!
+[FLASH] 11.670 seconds elapsed
+[FLASH] Finished with 1 warning (see above)
+Done!
+Aligning sequences...
+Processing reads; N_TOT_READS: 0 N_COMPUTED_ALN: 0 N_CACHED_ALN: 0 N_COMPUTED_NOTALN: 0 N_CACHED_NOTALN: 0
+Processing reads; N_TOT_READS: 10000 N_COMPUTED_ALN: 344 N_CACHED_ALN: 99 N_COMPUTED_NOTALN: 6338 N_CACHED_NOTALN: 3219
+Processing reads; N_TOT_READS: 20000 N_COMPUTED_ALN: 697 N_CACHED_ALN: 308 N_COMPUTED_NOTALN: 11464 N_CACHED_NOTALN: 7531
+Processing reads; N_TOT_READS: 30000 N_COMPUTED_ALN: 1054 N_CACHED_ALN: 459 N_COMPUTED_NOTALN: 17296 N_CACHED_NOTALN: 11191
+Processing reads; N_TOT_READS: 40000 N_COMPUTED_ALN: 1365 N_CACHED_ALN: 658 N_COMPUTED_NOTALN: 22049 N_CACHED_NOTALN: 15928
+Processing reads; N_TOT_READS: 50000 N_COMPUTED_ALN: 1688 N_CACHED_ALN: 917 N_COMPUTED_NOTALN: 26448 N_CACHED_NOTALN: 20947
+Finished reads; N_TOT_READS: 51236 N_COMPUTED_ALN: 1730 N_CACHED_ALN: 953 N_COMPUTED_NOTALN: 27004 N_CACHED_NOTALN: 21549
+Done!
+Quantifying indels/substitutions...
+Done!
+Calculating allele frequencies...
+Done!
+Saving processed data...
+Making Plots...
+Done!
+Removing Intermediate files...
+Analysis Complete!
