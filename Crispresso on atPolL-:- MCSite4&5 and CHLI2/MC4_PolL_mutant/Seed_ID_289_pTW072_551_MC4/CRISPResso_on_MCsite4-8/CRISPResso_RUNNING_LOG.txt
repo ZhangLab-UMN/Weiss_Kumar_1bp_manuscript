@@ -1,0 +1,99 @@
+CRISPResso version 2.1.1
+[Command used]:
+/opt/conda/bin/CRISPResso --fastq_r1 7_R1_001.fastq.gz --fastq_r2 7_R2_001.fastq.gz --amplicon_seq CGGTTTATGTTGATCGGATTTTAATTTTGCGAATATAATCGGTTTGGGTGCTACGAATCTAATTTTATGAACAAACCGGGAATCAATTATTGATTATCCTTGGTTCAAGGAGAACTCTCTCTCATTTCTCGGTTTACTCCATTCTATAGACTATTAATTTAATTCTATAGACTATTAGTTTTCTCGCACTTAAGCTCTGGTTCGGACAGAAATATAAGCCGAACCCTGTATTTCGCGATCTGCCGAACAGATGCTCTACGGGGAGTAAGTTGAGCCCAGCATCTCGCTCCCCAACTAATATGCTGAGTCCGCCTCACTTATTTTTTATACAGAGCCCAGAACTCCCTCTTT --guide_seq GTTTTCTCGCACTTAAGCTC --output Seed_ID_289_pTW072_551_MC4 --name MCsite4-8 --ignore_substitutions --quantification_window_size 3 --min_identity_score 90
+
+[Execution log]:
+Estimating average read length...
+Merging paired sequences with Flash...
+Running FLASH command: flash "7_R1_001.fastq.gz" "7_R2_001.fastq.gz" --min-overlap 10 --max-overlap 100 --allow-outies -z -d /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8 -o out >>/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/CRISPResso_RUNNING_LOG.txt 2>&1
+[FLASH] Starting FLASH v1.2.11
+[FLASH] Fast Length Adjustment of SHort reads
+[FLASH]  
+[FLASH] Input files:
+[FLASH]     7_R1_001.fastq.gz
+[FLASH]     7_R2_001.fastq.gz
+[FLASH]  
+[FLASH] Output files:
+[FLASH]     /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.extendedFrags.fastq.gz
+[FLASH]     /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.notCombined_1.fastq.gz
+[FLASH]     /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.notCombined_2.fastq.gz
+[FLASH]     /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.hist
+[FLASH]     /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.histogram
+[FLASH]  
+[FLASH] Parameters:
+[FLASH]     Min overlap:           10
+[FLASH]     Max overlap:           100
+[FLASH]     Max mismatch density:  0.250000
+[FLASH]     Allow "outie" pairs:   true
+[FLASH]     Cap mismatch quals:    false
+[FLASH]     Combiner threads:      3
+[FLASH]     Input format:          FASTQ, phred_offset=33
+[FLASH]     Output format:         FASTQ, phred_offset=33, gzip
+[FLASH]  
+[FLASH] Starting reader and writer threads
+[FLASH] Starting 3 combiner threads
+[FLASH] Processed 25000 read pairs
+[FLASH] Processed 50000 read pairs
+[FLASH] Processed 75000 read pairs
+[FLASH] Processed 100000 read pairs
+[FLASH] Processed 125000 read pairs
+[FLASH] Processed 150000 read pairs
+[FLASH] Processed 175000 read pairs
+[FLASH] Processed 189113 read pairs
+[FLASH]  
+[FLASH] Read combination statistics:
+[FLASH]     Total pairs:      189113
+[FLASH]     Combined pairs:   169418
+[FLASH]         Innie pairs:   168248 (99.31% of combined)
+[FLASH]         Outie pairs:   1170 (0.69% of combined)
+[FLASH]     Uncombined pairs: 19695
+[FLASH]     Percent combined: 89.59%
+[FLASH]  
+[FLASH] Writing histogram files.
+[FLASH] WARNING: An unexpectedly high proportion of combined pairs (43.26%)
+overlapped by more than 100 bp, the --max-overlap (-M) parameter.  Consider
+increasing this parameter.  (As-is, FLASH is penalizing overlaps longer than
+100 bp when considering them for possible combining!)
+[FLASH]  
+[FLASH] FLASH v1.2.11 complete!
+[FLASH] 289.555 seconds elapsed
+[FLASH] Finished with 1 warning (see above)
+Done!
+Aligning sequences...
+Processing reads; N_TOT_READS: 0 N_COMPUTED_ALN: 0 N_CACHED_ALN: 0 N_COMPUTED_NOTALN: 0 N_CACHED_NOTALN: 0
+Processing reads; N_TOT_READS: 10000 N_COMPUTED_ALN: 1621 N_CACHED_ALN: 1656 N_COMPUTED_NOTALN: 4588 N_CACHED_NOTALN: 2135
+Processing reads; N_TOT_READS: 20000 N_COMPUTED_ALN: 2821 N_CACHED_ALN: 3722 N_COMPUTED_NOTALN: 8634 N_CACHED_NOTALN: 4823
+Processing reads; N_TOT_READS: 30000 N_COMPUTED_ALN: 3858 N_CACHED_ALN: 5842 N_COMPUTED_NOTALN: 12513 N_CACHED_NOTALN: 7787
+Processing reads; N_TOT_READS: 40000 N_COMPUTED_ALN: 4982 N_CACHED_ALN: 8015 N_COMPUTED_NOTALN: 16375 N_CACHED_NOTALN: 10628
+Processing reads; N_TOT_READS: 50000 N_COMPUTED_ALN: 6035 N_CACHED_ALN: 10237 N_COMPUTED_NOTALN: 19974 N_CACHED_NOTALN: 13754
+Processing reads; N_TOT_READS: 60000 N_COMPUTED_ALN: 6978 N_CACHED_ALN: 12459 N_COMPUTED_NOTALN: 23574 N_CACHED_NOTALN: 16989
+Processing reads; N_TOT_READS: 70000 N_COMPUTED_ALN: 7820 N_CACHED_ALN: 14625 N_COMPUTED_NOTALN: 27054 N_CACHED_NOTALN: 20501
+Processing reads; N_TOT_READS: 80000 N_COMPUTED_ALN: 8638 N_CACHED_ALN: 16875 N_COMPUTED_NOTALN: 30378 N_CACHED_NOTALN: 24109
+Processing reads; N_TOT_READS: 90000 N_COMPUTED_ALN: 9512 N_CACHED_ALN: 19176 N_COMPUTED_NOTALN: 33682 N_CACHED_NOTALN: 27630
+Processing reads; N_TOT_READS: 100000 N_COMPUTED_ALN: 10473 N_CACHED_ALN: 21505 N_COMPUTED_NOTALN: 37175 N_CACHED_NOTALN: 30847
+Processing reads; N_TOT_READS: 110000 N_COMPUTED_ALN: 11501 N_CACHED_ALN: 23679 N_COMPUTED_NOTALN: 40692 N_CACHED_NOTALN: 34128
+Processing reads; N_TOT_READS: 120000 N_COMPUTED_ALN: 12619 N_CACHED_ALN: 25833 N_COMPUTED_NOTALN: 44489 N_CACHED_NOTALN: 37059
+Processing reads; N_TOT_READS: 130000 N_COMPUTED_ALN: 13609 N_CACHED_ALN: 27978 N_COMPUTED_NOTALN: 47907 N_CACHED_NOTALN: 40506
+Processing reads; N_TOT_READS: 140000 N_COMPUTED_ALN: 14459 N_CACHED_ALN: 30342 N_COMPUTED_NOTALN: 50934 N_CACHED_NOTALN: 44265
+Processing reads; N_TOT_READS: 150000 N_COMPUTED_ALN: 15148 N_CACHED_ALN: 32692 N_COMPUTED_NOTALN: 53974 N_CACHED_NOTALN: 48186
+Processing reads; N_TOT_READS: 160000 N_COMPUTED_ALN: 15883 N_CACHED_ALN: 34944 N_COMPUTED_NOTALN: 56974 N_CACHED_NOTALN: 52199
+Finished reads; N_TOT_READS: 169418 N_COMPUTED_ALN: 16533 N_CACHED_ALN: 37049 N_COMPUTED_NOTALN: 59770 N_CACHED_NOTALN: 56066
+Done!
+Quantifying indels/substitutions...
+Done!
+Calculating allele frequencies...
+Done!
+Saving processed data...
+Making Plots...
+Done!
+Removing Intermediate files...
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.extendedFrags.fastq.gz: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.extendedFrags.fastq.gz'
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.hist: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.hist'
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.histogram: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.histogram'
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.notCombined_1.fastq.gz: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.notCombined_1.fastq.gz'
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.notCombined_2.fastq.gz: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.notCombined_2.fastq.gz'
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.hist.innie: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.hist.innie'
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.histogram.innie: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.histogram.innie'
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.histogram.outie: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.histogram.outie'
+Skipping removal of: /DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.hist.outie: [Errno 2] No such file or directory: '/DATA/Seed_ID_289_pTW072_551_MC4/CRISPResso_on_MCsite4-8/out.hist.outie'
+Analysis Complete!
