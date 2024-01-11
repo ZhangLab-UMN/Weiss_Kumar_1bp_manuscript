@@ -1,0 +1,109 @@
+CRISPResso version 2.1.1
+[Command used]:
+/opt/conda/bin/CRISPResso --fastq_r1 1_R1_001.fastq.gz --fastq_r2 1_R2_001.fastq.gz --amplicon_seq taggatctctggcatgcgagaatctcacgcaggcagttctatgaggcagagcgacacctttaggcagaccagtagatccagaggagttcatgatcagtgcaattgtcttgtccctatcgaaggactctggcacaaaatcgtattcattaaaaccgggaggtagatgagatgtgacgaacgtgtacatcgactgaaatccctggtaatccgttttagaatccatgataataattttttggatgattgggagctttttttgcacgttcaaaattttttgcaacccctttttggaaacgaacaccacggtaggctg --guide_seq aattgtcttgtccctatcga --output_folder human_gRNA_3 --name rep1 --ignore_substitutions --quantification_window_size 3 --min_identity_score 90
+
+[Execution log]:
+Estimating average read length...
+Merging paired sequences with Flash...
+Running FLASH command: flash "1_R1_001.fastq.gz" "1_R2_001.fastq.gz" --min-overlap 10 --max-overlap 100 --allow-outies -z -d /DATA/human_gRNA_3/CRISPResso_on_rep1 -o out >>/DATA/human_gRNA_3/CRISPResso_on_rep1/CRISPResso_RUNNING_LOG.txt 2>&1
+[FLASH] Starting FLASH v1.2.11
+[FLASH] Fast Length Adjustment of SHort reads
+[FLASH]  
+[FLASH] Input files:
+[FLASH]     1_R1_001.fastq.gz
+[FLASH]     1_R2_001.fastq.gz
+[FLASH]  
+[FLASH] Output files:
+[FLASH]     /DATA/human_gRNA_3/CRISPResso_on_rep1/out.extendedFrags.fastq.gz
+[FLASH]     /DATA/human_gRNA_3/CRISPResso_on_rep1/out.notCombined_1.fastq.gz
+[FLASH]     /DATA/human_gRNA_3/CRISPResso_on_rep1/out.notCombined_2.fastq.gz
+[FLASH]     /DATA/human_gRNA_3/CRISPResso_on_rep1/out.hist
+[FLASH]     /DATA/human_gRNA_3/CRISPResso_on_rep1/out.histogram
+[FLASH]  
+[FLASH] Parameters:
+[FLASH]     Min overlap:           10
+[FLASH]     Max overlap:           100
+[FLASH]     Max mismatch density:  0.250000
+[FLASH]     Allow "outie" pairs:   true
+[FLASH]     Cap mismatch quals:    false
+[FLASH]     Combiner threads:      3
+[FLASH]     Input format:          FASTQ, phred_offset=33
+[FLASH]     Output format:         FASTQ, phred_offset=33, gzip
+[FLASH]  
+[FLASH] Starting reader and writer threads
+[FLASH] Starting 3 combiner threads
+[FLASH] Processed 25000 read pairs
+[FLASH] Processed 50000 read pairs
+[FLASH] Processed 75000 read pairs
+[FLASH] Processed 100000 read pairs
+[FLASH] Processed 125000 read pairs
+[FLASH] Processed 150000 read pairs
+[FLASH] Processed 175000 read pairs
+[FLASH] Processed 200000 read pairs
+[FLASH] Processed 225000 read pairs
+[FLASH] Processed 250000 read pairs
+[FLASH] Processed 275000 read pairs
+[FLASH] Processed 300000 read pairs
+[FLASH] Processed 324765 read pairs
+[FLASH]  
+[FLASH] Read combination statistics:
+[FLASH]     Total pairs:      324765
+[FLASH]     Combined pairs:   304817
+[FLASH]         Innie pairs:   292335 (95.91% of combined)
+[FLASH]         Outie pairs:   12482 (4.09% of combined)
+[FLASH]     Uncombined pairs: 19948
+[FLASH]     Percent combined: 93.86%
+[FLASH]  
+[FLASH] Writing histogram files.
+[FLASH] WARNING: An unexpectedly high proportion of combined pairs (73.49%)
+overlapped by more than 100 bp, the --max-overlap (-M) parameter.  Consider
+increasing this parameter.  (As-is, FLASH is penalizing overlaps longer than
+100 bp when considering them for possible combining!)
+[FLASH]  
+[FLASH] FLASH v1.2.11 complete!
+[FLASH] 81.315 seconds elapsed
+[FLASH] Finished with 1 warning (see above)
+Done!
+Aligning sequences...
+Processing reads; N_TOT_READS: 0 N_COMPUTED_ALN: 0 N_CACHED_ALN: 0 N_COMPUTED_NOTALN: 0 N_CACHED_NOTALN: 0
+Processing reads; N_TOT_READS: 10000 N_COMPUTED_ALN: 1124 N_CACHED_ALN: 2486 N_COMPUTED_NOTALN: 3661 N_CACHED_NOTALN: 2729
+Processing reads; N_TOT_READS: 20000 N_COMPUTED_ALN: 1947 N_CACHED_ALN: 5389 N_COMPUTED_NOTALN: 6879 N_CACHED_NOTALN: 5785
+Processing reads; N_TOT_READS: 30000 N_COMPUTED_ALN: 2655 N_CACHED_ALN: 8496 N_COMPUTED_NOTALN: 9886 N_CACHED_NOTALN: 8963
+Processing reads; N_TOT_READS: 40000 N_COMPUTED_ALN: 3391 N_CACHED_ALN: 11586 N_COMPUTED_NOTALN: 12811 N_CACHED_NOTALN: 12212
+Processing reads; N_TOT_READS: 50000 N_COMPUTED_ALN: 4140 N_CACHED_ALN: 14850 N_COMPUTED_NOTALN: 15482 N_CACHED_NOTALN: 15528
+Processing reads; N_TOT_READS: 60000 N_COMPUTED_ALN: 4872 N_CACHED_ALN: 18120 N_COMPUTED_NOTALN: 18234 N_CACHED_NOTALN: 18774
+Processing reads; N_TOT_READS: 70000 N_COMPUTED_ALN: 5646 N_CACHED_ALN: 21489 N_COMPUTED_NOTALN: 20830 N_CACHED_NOTALN: 22035
+Processing reads; N_TOT_READS: 80000 N_COMPUTED_ALN: 6389 N_CACHED_ALN: 24999 N_COMPUTED_NOTALN: 23386 N_CACHED_NOTALN: 25226
+Processing reads; N_TOT_READS: 90000 N_COMPUTED_ALN: 7114 N_CACHED_ALN: 28412 N_COMPUTED_NOTALN: 25962 N_CACHED_NOTALN: 28512
+Processing reads; N_TOT_READS: 100000 N_COMPUTED_ALN: 7812 N_CACHED_ALN: 31766 N_COMPUTED_NOTALN: 28510 N_CACHED_NOTALN: 31912
+Processing reads; N_TOT_READS: 110000 N_COMPUTED_ALN: 8489 N_CACHED_ALN: 35130 N_COMPUTED_NOTALN: 31101 N_CACHED_NOTALN: 35280
+Processing reads; N_TOT_READS: 120000 N_COMPUTED_ALN: 9164 N_CACHED_ALN: 38442 N_COMPUTED_NOTALN: 33683 N_CACHED_NOTALN: 38711
+Processing reads; N_TOT_READS: 130000 N_COMPUTED_ALN: 9789 N_CACHED_ALN: 41856 N_COMPUTED_NOTALN: 36284 N_CACHED_NOTALN: 42071
+Processing reads; N_TOT_READS: 140000 N_COMPUTED_ALN: 10434 N_CACHED_ALN: 45311 N_COMPUTED_NOTALN: 38796 N_CACHED_NOTALN: 45459
+Processing reads; N_TOT_READS: 150000 N_COMPUTED_ALN: 11050 N_CACHED_ALN: 48550 N_COMPUTED_NOTALN: 41422 N_CACHED_NOTALN: 48978
+Processing reads; N_TOT_READS: 160000 N_COMPUTED_ALN: 11658 N_CACHED_ALN: 51783 N_COMPUTED_NOTALN: 43955 N_CACHED_NOTALN: 52604
+Processing reads; N_TOT_READS: 170000 N_COMPUTED_ALN: 12182 N_CACHED_ALN: 54899 N_COMPUTED_NOTALN: 46452 N_CACHED_NOTALN: 56467
+Processing reads; N_TOT_READS: 180000 N_COMPUTED_ALN: 12724 N_CACHED_ALN: 57979 N_COMPUTED_NOTALN: 48943 N_CACHED_NOTALN: 60354
+Processing reads; N_TOT_READS: 190000 N_COMPUTED_ALN: 13249 N_CACHED_ALN: 61225 N_COMPUTED_NOTALN: 51438 N_CACHED_NOTALN: 64088
+Processing reads; N_TOT_READS: 200000 N_COMPUTED_ALN: 13840 N_CACHED_ALN: 64548 N_COMPUTED_NOTALN: 53888 N_CACHED_NOTALN: 67724
+Processing reads; N_TOT_READS: 210000 N_COMPUTED_ALN: 14437 N_CACHED_ALN: 67872 N_COMPUTED_NOTALN: 56374 N_CACHED_NOTALN: 71317
+Processing reads; N_TOT_READS: 220000 N_COMPUTED_ALN: 15057 N_CACHED_ALN: 71253 N_COMPUTED_NOTALN: 58770 N_CACHED_NOTALN: 74920
+Processing reads; N_TOT_READS: 230000 N_COMPUTED_ALN: 15650 N_CACHED_ALN: 74663 N_COMPUTED_NOTALN: 61237 N_CACHED_NOTALN: 78450
+Processing reads; N_TOT_READS: 240000 N_COMPUTED_ALN: 16261 N_CACHED_ALN: 78184 N_COMPUTED_NOTALN: 63624 N_CACHED_NOTALN: 81931
+Processing reads; N_TOT_READS: 250000 N_COMPUTED_ALN: 17091 N_CACHED_ALN: 81447 N_COMPUTED_NOTALN: 66271 N_CACHED_NOTALN: 85191
+Processing reads; N_TOT_READS: 260000 N_COMPUTED_ALN: 17843 N_CACHED_ALN: 84758 N_COMPUTED_NOTALN: 68808 N_CACHED_NOTALN: 88591
+Processing reads; N_TOT_READS: 270000 N_COMPUTED_ALN: 18443 N_CACHED_ALN: 88198 N_COMPUTED_NOTALN: 71167 N_CACHED_NOTALN: 92192
+Processing reads; N_TOT_READS: 280000 N_COMPUTED_ALN: 18990 N_CACHED_ALN: 91580 N_COMPUTED_NOTALN: 73555 N_CACHED_NOTALN: 95875
+Processing reads; N_TOT_READS: 290000 N_COMPUTED_ALN: 19583 N_CACHED_ALN: 94971 N_COMPUTED_NOTALN: 76013 N_CACHED_NOTALN: 99433
+Processing reads; N_TOT_READS: 300000 N_COMPUTED_ALN: 20151 N_CACHED_ALN: 98301 N_COMPUTED_NOTALN: 78538 N_CACHED_NOTALN: 103010
+Finished reads; N_TOT_READS: 304817 N_COMPUTED_ALN: 20403 N_CACHED_ALN: 99970 N_COMPUTED_NOTALN: 79665 N_CACHED_NOTALN: 104779
+Done!
+Quantifying indels/substitutions...
+Done!
+Calculating allele frequencies...
+Done!
+Saving processed data...
+Making Plots...
+Done!
+Removing Intermediate files...
+Analysis Complete!

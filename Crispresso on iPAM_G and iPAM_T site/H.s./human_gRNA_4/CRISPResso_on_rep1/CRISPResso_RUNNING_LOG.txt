@@ -1,0 +1,96 @@
+CRISPResso version 2.1.1
+[Command used]:
+/opt/conda/bin/CRISPResso --fastq_r1 4_R1_001.fastq.gz --fastq_r2 4_R2_001.fastq.gz --amplicon_seq cagcctaccgtggtgttcgtttccaaaaaggggttgcaaaaaattttgaacgtgcaaaaaaagctcccaatcatccaaaaaattattatcatggattctaaaacggattaccagggatttcagtcgatgtacacgttcgtcacatctcatctacctcccggttttaatgaatacgattttgtgccagagtccttcgatagggacaagacaattgcactgatcatgaactcctctggatctactggtctgcctaaaggtgtcgctctgcctcatagaactgcctgcgtgagattctcgcatgccagagatccta --guide_seq tgtgccagagtccttcgata --output_folder human_gRNA_4 --name rep1 --ignore_substitutions --quantification_window_size 3 --min_identity_score 90
+
+[Execution log]:
+Estimating average read length...
+Merging paired sequences with Flash...
+Running FLASH command: flash "4_R1_001.fastq.gz" "4_R2_001.fastq.gz" --min-overlap 10 --max-overlap 100 --allow-outies -z -d /DATA/human_gRNA_4/CRISPResso_on_rep1 -o out >>/DATA/human_gRNA_4/CRISPResso_on_rep1/CRISPResso_RUNNING_LOG.txt 2>&1
+[FLASH] Starting FLASH v1.2.11
+[FLASH] Fast Length Adjustment of SHort reads
+[FLASH]  
+[FLASH] Input files:
+[FLASH]     4_R1_001.fastq.gz
+[FLASH]     4_R2_001.fastq.gz
+[FLASH]  
+[FLASH] Output files:
+[FLASH]     /DATA/human_gRNA_4/CRISPResso_on_rep1/out.extendedFrags.fastq.gz
+[FLASH]     /DATA/human_gRNA_4/CRISPResso_on_rep1/out.notCombined_1.fastq.gz
+[FLASH]     /DATA/human_gRNA_4/CRISPResso_on_rep1/out.notCombined_2.fastq.gz
+[FLASH]     /DATA/human_gRNA_4/CRISPResso_on_rep1/out.hist
+[FLASH]     /DATA/human_gRNA_4/CRISPResso_on_rep1/out.histogram
+[FLASH]  
+[FLASH] Parameters:
+[FLASH]     Min overlap:           10
+[FLASH]     Max overlap:           100
+[FLASH]     Max mismatch density:  0.250000
+[FLASH]     Allow "outie" pairs:   true
+[FLASH]     Cap mismatch quals:    false
+[FLASH]     Combiner threads:      3
+[FLASH]     Input format:          FASTQ, phred_offset=33
+[FLASH]     Output format:         FASTQ, phred_offset=33, gzip
+[FLASH]  
+[FLASH] Starting reader and writer threads
+[FLASH] Starting 3 combiner threads
+[FLASH] Processed 25000 read pairs
+[FLASH] Processed 50000 read pairs
+[FLASH] Processed 75000 read pairs
+[FLASH] Processed 100000 read pairs
+[FLASH] Processed 125000 read pairs
+[FLASH] Processed 150000 read pairs
+[FLASH] Processed 175000 read pairs
+[FLASH] Processed 200000 read pairs
+[FLASH] Processed 223573 read pairs
+[FLASH]  
+[FLASH] Read combination statistics:
+[FLASH]     Total pairs:      223573
+[FLASH]     Combined pairs:   212130
+[FLASH]         Innie pairs:   206339 (97.27% of combined)
+[FLASH]         Outie pairs:   5791 (2.73% of combined)
+[FLASH]     Uncombined pairs: 11443
+[FLASH]     Percent combined: 94.88%
+[FLASH]  
+[FLASH] Writing histogram files.
+[FLASH] WARNING: An unexpectedly high proportion of combined pairs (51.96%)
+overlapped by more than 100 bp, the --max-overlap (-M) parameter.  Consider
+increasing this parameter.  (As-is, FLASH is penalizing overlaps longer than
+100 bp when considering them for possible combining!)
+[FLASH]  
+[FLASH] FLASH v1.2.11 complete!
+[FLASH] 51.660 seconds elapsed
+[FLASH] Finished with 1 warning (see above)
+Done!
+Aligning sequences...
+Processing reads; N_TOT_READS: 0 N_COMPUTED_ALN: 0 N_CACHED_ALN: 0 N_COMPUTED_NOTALN: 0 N_CACHED_NOTALN: 0
+Processing reads; N_TOT_READS: 10000 N_COMPUTED_ALN: 1342 N_CACHED_ALN: 2614 N_COMPUTED_NOTALN: 3755 N_CACHED_NOTALN: 2289
+Processing reads; N_TOT_READS: 20000 N_COMPUTED_ALN: 2383 N_CACHED_ALN: 5617 N_COMPUTED_NOTALN: 7071 N_CACHED_NOTALN: 4929
+Processing reads; N_TOT_READS: 30000 N_COMPUTED_ALN: 3343 N_CACHED_ALN: 8820 N_COMPUTED_NOTALN: 10258 N_CACHED_NOTALN: 7579
+Processing reads; N_TOT_READS: 40000 N_COMPUTED_ALN: 4330 N_CACHED_ALN: 12339 N_COMPUTED_NOTALN: 13205 N_CACHED_NOTALN: 10126
+Processing reads; N_TOT_READS: 50000 N_COMPUTED_ALN: 5295 N_CACHED_ALN: 15982 N_COMPUTED_NOTALN: 16031 N_CACHED_NOTALN: 12692
+Processing reads; N_TOT_READS: 60000 N_COMPUTED_ALN: 6322 N_CACHED_ALN: 19644 N_COMPUTED_NOTALN: 18819 N_CACHED_NOTALN: 15215
+Processing reads; N_TOT_READS: 70000 N_COMPUTED_ALN: 7244 N_CACHED_ALN: 23380 N_COMPUTED_NOTALN: 21531 N_CACHED_NOTALN: 17845
+Processing reads; N_TOT_READS: 80000 N_COMPUTED_ALN: 8129 N_CACHED_ALN: 26904 N_COMPUTED_NOTALN: 24415 N_CACHED_NOTALN: 20552
+Processing reads; N_TOT_READS: 90000 N_COMPUTED_ALN: 8959 N_CACHED_ALN: 30441 N_COMPUTED_NOTALN: 27122 N_CACHED_NOTALN: 23478
+Processing reads; N_TOT_READS: 100000 N_COMPUTED_ALN: 9761 N_CACHED_ALN: 33918 N_COMPUTED_NOTALN: 29867 N_CACHED_NOTALN: 26454
+Processing reads; N_TOT_READS: 110000 N_COMPUTED_ALN: 10493 N_CACHED_ALN: 37338 N_COMPUTED_NOTALN: 32522 N_CACHED_NOTALN: 29647
+Processing reads; N_TOT_READS: 120000 N_COMPUTED_ALN: 11153 N_CACHED_ALN: 40514 N_COMPUTED_NOTALN: 35177 N_CACHED_NOTALN: 33156
+Processing reads; N_TOT_READS: 130000 N_COMPUTED_ALN: 11842 N_CACHED_ALN: 43964 N_COMPUTED_NOTALN: 37731 N_CACHED_NOTALN: 36463
+Processing reads; N_TOT_READS: 140000 N_COMPUTED_ALN: 12620 N_CACHED_ALN: 47419 N_COMPUTED_NOTALN: 40258 N_CACHED_NOTALN: 39703
+Processing reads; N_TOT_READS: 150000 N_COMPUTED_ALN: 13434 N_CACHED_ALN: 51079 N_COMPUTED_NOTALN: 42832 N_CACHED_NOTALN: 42655
+Processing reads; N_TOT_READS: 160000 N_COMPUTED_ALN: 14229 N_CACHED_ALN: 54882 N_COMPUTED_NOTALN: 45350 N_CACHED_NOTALN: 45539
+Processing reads; N_TOT_READS: 170000 N_COMPUTED_ALN: 15008 N_CACHED_ALN: 58753 N_COMPUTED_NOTALN: 47832 N_CACHED_NOTALN: 48407
+Processing reads; N_TOT_READS: 180000 N_COMPUTED_ALN: 16088 N_CACHED_ALN: 62155 N_COMPUTED_NOTALN: 50626 N_CACHED_NOTALN: 51131
+Processing reads; N_TOT_READS: 190000 N_COMPUTED_ALN: 16861 N_CACHED_ALN: 65730 N_COMPUTED_NOTALN: 53184 N_CACHED_NOTALN: 54225
+Processing reads; N_TOT_READS: 200000 N_COMPUTED_ALN: 17608 N_CACHED_ALN: 69311 N_COMPUTED_NOTALN: 55687 N_CACHED_NOTALN: 57394
+Processing reads; N_TOT_READS: 210000 N_COMPUTED_ALN: 18324 N_CACHED_ALN: 72825 N_COMPUTED_NOTALN: 58165 N_CACHED_NOTALN: 60686
+Finished reads; N_TOT_READS: 212130 N_COMPUTED_ALN: 18465 N_CACHED_ALN: 73607 N_COMPUTED_NOTALN: 58703 N_CACHED_NOTALN: 61355
+Done!
+Quantifying indels/substitutions...
+Done!
+Calculating allele frequencies...
+Done!
+Saving processed data...
+Making Plots...
+Done!
+Removing Intermediate files...
+Analysis Complete!
